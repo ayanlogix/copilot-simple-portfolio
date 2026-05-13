@@ -4,133 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayan Hussain | AI Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg: #050505;
-            --primary: #00d2ff;
-            --secondary: #3a7bd5;
-            --text: #ffffff;
-            --text-dim: #a0a0a0;
-            --card: #111111;
-            --border: #222222;
-        }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         body {
+            background-color: #03030b;
+            color: white;
             font-family: 'Inter', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            min-height: 100vh;
+            overflow-x: hidden;
         }
-
-        .container { 
-            max-width: 1000px; 
-            margin: 0 auto; 
-            padding: 0 20px; 
-        }
-
-        /* FIX: Increased padding and clear separation */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+        
+        /* Fixed Nav Spacing */
         nav {
             padding: 40px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+        .logo { font-weight: 900; font-size: 1.5rem; color: #00d2ff; }
+        .nav-links { display: flex; gap: 30px; font-size: 0.9rem; color: #888; }
 
-        .logo {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 800;
-            font-size: 1.5rem;
-            color: var(--primary);
-            letter-spacing: -1px;
+        /* Hero Section - Restored Old Style */
+        .hero {
+            padding: 40px 0 100px; /* Added top padding to prevent overlap */
         }
-
-        /* FIX: Massive top margin to prevent overlap with logo */
-        header {
-            padding: 60px 0 100px;
-        }
-
-        h1 {
-            font-family: 'Outfit', sans-serif;
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
-
-        .gradient {
-            background: linear-gradient(to right, #fff, var(--primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .desc {
-            font-size: 1.2rem;
-            color: var(--text-dim);
-            max-width: 600px;
-            margin-bottom: 40px;
-        }
-
-        .btn-group { display: flex; gap: 15px; }
-
-        .btn {
-            padding: 14px 28px;
-            border-radius: 100px;
+        h1 { font-size: 4rem; font-weight: 900; margin-bottom: 10px; line-height: 1; }
+        .subheading { font-size: 1.1rem; color: #ccc; margin-bottom: 40px; max-width: 800px; }
+        
+        .btn-group { display: flex; gap: 20px; }
+        .btn-view {
+            background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+            padding: 15px 40px;
+            border-radius: 50px;
             font-weight: 700;
             text-decoration: none;
-            transition: 0.3s;
-            font-size: 0.9rem;
+            color: white;
+        }
+        .btn-github {
+            border: 2px solid #3a7bd5;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+            background: rgba(58, 123, 213, 0.1);
         }
 
-        .btn-p {
-            background: var(--primary);
-            color: #000;
-        }
-
-        .btn-o {
-            border: 1px solid var(--border);
-            color: #fff;
-        }
-
-        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
-
-        section { padding: 80px 0; }
-
-        h2 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 2.2rem;
-            margin-bottom: 40px;
-            text-align: center;
-        }
+        /* Projects Section */
+        .projects-section { padding: 100px 0; }
+        .section-title { font-size: 3.5rem; font-weight: 900; text-align: center; margin-bottom: 80px; }
+        .section-title span { color: #3a7bd5; }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
         }
 
+        /* Restored "EL", "GR", "LO" Style */
         .card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            padding: 30px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px;
             border-radius: 20px;
             transition: 0.3s;
         }
+        .card:hover { background: rgba(255, 255, 255, 0.05); transform: translateY(-5px); }
+        .card-code { font-size: 3rem; font-weight: 900; color: #444; margin-bottom: 20px; }
+        .card h3 { font-size: 1.8rem; margin-bottom: 15px; }
+        .card p { color: #888; line-height: 1.6; font-size: 1rem; }
 
-        .card:hover { border-color: var(--primary); transform: translateY(-5px); }
-
-        .card h3 { font-size: 1.3rem; margin-bottom: 10px; }
-        .card p { color: var(--text-dim); font-size: 0.9rem; }
-
-        footer {
+        .footer-note {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 20px;
+            border-radius: 10px;
             text-align: center;
-            padding: 60px 0;
-            border-top: 1px solid var(--border);
-            color: #444;
-            font-size: 0.8rem;
+            margin-top: 50px;
+            color: #666;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
     </style>
 </head>
@@ -138,39 +91,45 @@
     <div class="container">
         <nav>
             <div class="logo">AH.</div>
-            <a href="https://github.com/ayanlogix" class="btn btn-o">GitHub</a>
+            <div class="nav-links">
+                <span>Projects</span>
+                <span>Skills</span>
+            </div>
         </nav>
 
-        <header>
-            <h1>Hi, I'm <span class="gradient">Ayan Hussain</span></h1>
-            <p class="desc">AI Developer & Founder of Zappnod. Building high-velocity automation tools and solving complex GenAI challenges.</p>
+        <header class="hero">
+            <h1>AI Developer</h1>
+            <p class="subheading">Building next-gen AI automation tools. Founder of Zappnod -- the AI visual canvas platform. MLH Hackathon speedrunner.</p>
             <div class="btn-group">
-                <a href="#work" class="btn btn-p">View Projects</a>
-                <a href="mailto:logix.ayan@gmail.com" class="btn btn-o">Contact</a>
+                <a href="#work" class="btn-view">View Projects</a>
+                <a href="https://github.com/ayanlogix" class="btn-github">GitHub &rarr;</a>
             </div>
         </header>
 
-        <section id="work">
-            <h2>Featured Projects</h2>
+        <section id="work" class="projects-section">
+            <h2 class="section-title">Featured <span>Projects</span></h2>
             <div class="grid">
                 <div class="card">
+                    <div class="card-code">EL</div>
                     <h3>Zappnod</h3>
-                    <p>AI-powered visual automation canvas. Built with a focus on neural processing and low-latency task execution.</p>
+                    <p>AI-powered visual automation canvas. Drag-drop workflows, glassmorphism UI, real-time neural processing. Built with vanilla JS + FastAPI.</p>
                 </div>
                 <div class="card">
-                    <h3>Mergington High</h3>
-                    <p>Advanced student portal system. Enhanced with Copilot for intelligent validation and dynamic UX.</p>
+                    <div class="card-code">GR</div>
+                    <h3>Mergington High School App</h3>
+                    <p>FastAPI-powered extracurricular activity management system. Built and improved using GitHub Copilot. Added 5 activities, unit tests, and participant tracking.</p>
                 </div>
                 <div class="card">
-                    <h3>SecureAuth Flow</h3>
-                    <p>Modern authentication implementation with Auth0. Featuring JWT session tracking and premium design.</p>
+                    <div class="card-code">LO</div>
+                    <h3>Auth0 Login Flow</h3>
+                    <p>Secure authentication implementation using Auth0 SPA SDK. Single-page application with login, logout, and user profile display.</p>
                 </div>
             </div>
+            
+            <div class="footer-note">
+                RB This portfolio was built with <strong>GitHub Copilot</strong> assistance -- from layout structure to card animations and responsive design.
+            </div>
         </section>
-
-        <footer>
-            &copy; 2026 Ayan Hussain | Built with GitHub Copilot
-        </footer>
     </div>
 </body>
 </html>
