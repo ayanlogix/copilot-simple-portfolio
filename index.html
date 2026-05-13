@@ -3,184 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayan Hussain | AI Developer Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>Ayan Hussain | AI Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #030303;
-            --card-bg: rgba(20, 20, 25, 0.6);
+            --bg: #050505;
             --primary: #00d2ff;
             --secondary: #3a7bd5;
-            --accent: #6366f1;
             --text: #ffffff;
-            --text-dim: #94a3b8;
-            --glass: rgba(255, 255, 255, 0.03);
-            --border: rgba(255, 255, 255, 0.08);
+            --text-dim: #a0a0a0;
+            --card: #111111;
+            --border: #222222;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg);
-            background-image: 
-                radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 100% 100%, rgba(0, 210, 255, 0.1) 0%, transparent 40%);
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
             color: var(--text);
             line-height: 1.6;
-            overflow-x: hidden;
             min-height: 100vh;
         }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 30px; }
+        .container { 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+        }
 
+        /* FIX: Increased padding and clear separation */
         nav {
-            padding: 30px 0;
+            padding: 40px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: relative;
-            z-index: 100;
         }
 
         .logo {
             font-family: 'Outfit', sans-serif;
             font-weight: 800;
-            font-size: 1.8rem;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 1.5rem;
+            color: var(--primary);
             letter-spacing: -1px;
         }
 
+        /* FIX: Massive top margin to prevent overlap with logo */
         header {
-            padding: 100px 0 80px;
-            position: relative;
-        }
-
-        .hero-content { max-width: 800px; }
-
-        .hero-label {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            margin-bottom: 20px;
-            display: block;
+            padding: 60px 0 100px;
         }
 
         h1 {
             font-family: 'Outfit', sans-serif;
-            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
             font-weight: 800;
             line-height: 1.1;
-            margin-bottom: 25px;
-            letter-spacing: -2px;
+            margin-bottom: 20px;
         }
 
-        .gradient-text {
-            background: linear-gradient(135deg, #fff 30%, #6366f1 100%);
+        .gradient {
+            background: linear-gradient(to right, #fff, var(--primary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .hero-desc {
+        .desc {
             font-size: 1.2rem;
             color: var(--text-dim);
+            max-width: 600px;
             margin-bottom: 40px;
-            max-width: 650px;
         }
 
-        .btn-group { display: flex; gap: 15px; flex-wrap: wrap; }
+        .btn-group { display: flex; gap: 15px; }
 
         .btn {
             padding: 14px 28px;
-            border-radius: 12px;
-            font-weight: 600;
+            border-radius: 100px;
+            font-weight: 700;
             text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.95rem;
+            transition: 0.3s;
+            font-size: 0.9rem;
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        .btn-p {
+            background: var(--primary);
             color: #000;
-            box-shadow: 0 10px 30px rgba(0, 210, 255, 0.2);
         }
 
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 210, 255, 0.3);
-        }
-
-        .btn-outline {
+        .btn-o {
             border: 1px solid var(--border);
-            color: var(--text);
-            background: var(--glass);
-            backdrop-filter: blur(10px);
+            color: #fff;
         }
 
-        .btn-outline:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: var(--primary);
-            transform: translateY(-3px);
-        }
+        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
 
         section { padding: 80px 0; }
 
         h2 {
             font-family: 'Outfit', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 800;
-            letter-spacing: -1px;
+            font-size: 2.2rem;
             margin-bottom: 40px;
+            text-align: center;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
 
         .card {
-            background: var(--card-bg);
+            background: var(--card);
             border: 1px solid var(--border);
+            padding: 30px;
             border-radius: 20px;
-            padding: 35px;
-            transition: all 0.4s ease;
-            backdrop-filter: blur(12px);
+            transition: 0.3s;
         }
 
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(0, 210, 255, 0.3);
-            background: rgba(30, 30, 40, 0.6);
-        }
+        .card:hover { border-color: var(--primary); transform: translateY(-5px); }
 
-        .card-icon { font-size: 2.2rem; margin-bottom: 20px; display: block; }
-        .card h3 { font-size: 1.4rem; margin-bottom: 12px; }
-        .card p { color: var(--text-dim); font-size: 0.95rem; line-height: 1.6; }
+        .card h3 { font-size: 1.3rem; margin-bottom: 10px; }
+        .card p { color: var(--text-dim); font-size: 0.9rem; }
 
-        .tag {
-            display: inline-block;
-            padding: 5px 12px;
-            background: rgba(99, 102, 241, 0.1);
-            color: var(--accent);
-            border-radius: 100px;
-            font-size: 0.7rem;
-            font-weight: 700;
-            margin-top: 15px;
-            border: 1px solid rgba(99, 102, 241, 0.2);
-        }
-
-        @media (max-width: 768px) {
-            header { padding: 60px 0; }
-            h1 { font-size: 2.8rem; }
-            .grid { grid-template-columns: 1fr; }
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            border-top: 1px solid var(--border);
+            color: #444;
+            font-size: 0.8rem;
         }
     </style>
 </head>
@@ -188,49 +138,38 @@
     <div class="container">
         <nav>
             <div class="logo">AH.</div>
-            <a href="https://github.com/ayanlogix" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;">GitHub</a>
+            <a href="https://github.com/ayanlogix" class="btn btn-o">GitHub</a>
         </nav>
 
         <header>
-            <div class="hero-content">
-                <span class="hero-label">Available for Work</span>
-                <h1>Hi, I'm <span class="gradient-text">Ayan Hussain</span></h1>
-                <p class="hero-desc">
-                    AI Developer building next-gen automation tools. Founder of Zappnod. Speedrunning hackathons with high-velocity engineering.
-                </p>
-                <div class="btn-group">
-                    <a href="#projects" class="btn btn-primary">Explore Projects</a>
-                    <a href="mailto:logix.ayan@gmail.com" class="btn btn-outline">Contact Me</a>
-                </div>
+            <h1>Hi, I'm <span class="gradient">Ayan Hussain</span></h1>
+            <p class="desc">AI Developer & Founder of Zappnod. Building high-velocity automation tools and solving complex GenAI challenges.</p>
+            <div class="btn-group">
+                <a href="#work" class="btn btn-p">View Projects</a>
+                <a href="mailto:logix.ayan@gmail.com" class="btn btn-o">Contact</a>
             </div>
         </header>
 
-        <section id="projects">
-            <h2>Featured <span style="color: var(--primary)">Works</span></h2>
+        <section id="work">
+            <h2>Featured Projects</h2>
             <div class="grid">
                 <div class="card">
-                    <span class="card-icon">🌀</span>
                     <h3>Zappnod</h3>
-                    <p>AI visual canvas platform for automated task orchestration and high-performance execution.</p>
-                    <span class="tag">AI INFRASTRUCTURE</span>
+                    <p>AI-powered visual automation canvas. Built with a focus on neural processing and low-latency task execution.</p>
                 </div>
                 <div class="card">
-                    <span class="card-icon">⚡</span>
                     <h3>Mergington High</h3>
-                    <p>Intelligent student portal with Copilot-assisted validation and dynamic signup logic.</p>
-                    <span class="tag">FULL STACK</span>
+                    <p>Advanced student portal system. Enhanced with Copilot for intelligent validation and dynamic UX.</p>
                 </div>
                 <div class="card">
-                    <span class="card-icon">🔐</span>
-                    <h3>SecureAuth</h3>
-                    <p>Advanced Auth0 implementation featuring JWT session management and cinematic glassmorphism UI.</p>
-                    <span class="tag">SECURITY</span>
+                    <h3>SecureAuth Flow</h3>
+                    <p>Modern authentication implementation with Auth0. Featuring JWT session tracking and premium design.</p>
                 </div>
             </div>
         </section>
 
-        <footer style="padding: 60px 0; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 0.85rem;">
-            <p>&copy; 2026 Ayan Hussain. Built with GitHub Copilot for MLH GenAI Hack Week.</p>
+        <footer>
+            &copy; 2026 Ayan Hussain | Built with GitHub Copilot
         </footer>
     </div>
 </body>
