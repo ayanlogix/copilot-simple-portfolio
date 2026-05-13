@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Ayan Hussain | AI Developer Portfolio</title>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+      <style>
+          * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #0a0a0f; color: #e0e0e0; }
+                nav { position: fixed; top: 0; width: 100%; padding: 20px 40px; background: rgba(10,10,15,0.9); backdrop-filter: blur(10px); display: flex; justify-content: space-between; align-items: center; z-index: 100; border-bottom: 1px solid rgba(99,93,255,0.2); }
+        nav .logo { font-size: 1.5rem; font-weight: 900; background: linear-gradient(135deg, #635dff, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav ul { list-style: none; display: flex; gap: 30px; }
+        nav ul li a { color: #aaa; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+                nav ul li a:hover { color: #635dff; }
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 100px 20px 60px; background: radial-gradient(ellipse at center, rgba(99,93,255,0.15) 0%, transparent 70%); }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+        .hero h1 span { background: linear-gradient(135deg, #635dff, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.2rem; color: #888; max-width: 600px; margin: 0 auto 40px; line-height: 1.6; }
+        .btn { display: inline-block; padding: 14px 32px; background: linear-gradient(135deg, #635dff, #00d4ff); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; margin: 8px; transition: transform 0.3s, box-shadow 0.3s; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(99,93,255,0.4); }
+        .btn.outline { background: transparent; border: 2px solid #635dff; color: #635dff; }
+        .section { padding: 80px 40px; max-width: 1100px; margin: 0 auto; }
+        .section h2 { font-size: 2.5rem; font-weight: 800; text-align: center; margin-bottom: 50px; }
+        .section h2 span { background: linear-gradient(135deg, #635dff, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+        .card { background: rgba(255,255,255,0.04); border: 1px solid rgba(99,93,255,0.2); border-radius: 16px; padding: 28px; transition: transform 0.3s, border-color 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: #635dff; }
+        .card .icon { font-size: 2.5rem; margin-bottom: 16px; }
+        .card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 10px; color: #fff; }
+                .card p { color: #888; line-height: 1.6; }
+        .skills { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 40px; }
+        .skill { padding: 8px 20px; border-radius: 50px; background: rgba(99,93,255,0.15); border: 1px solid rgba(99,93,255,0.3); color: #635dff; font-weight: 600; font-size: 0.9rem; }
+        .copilot-badge { background: rgba(99,93,255,0.1); border: 1px solid rgba(99,93,255,0.3); border-radius: 12px; padding: 20px 30px; text-align: center; margin: 40px 0; }
+        .copilot-badge p { color: #888; font-style: italic; }
+        footer { text-align: center; padding: 30px; color: #555; border-top: 1px solid rgba(99,93,255,0.1); }
+              </style>
+</head>
+          <body>
+    <nav>
+        <div class="logo">AH.</div>
+        <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+                    </nav> <span>Ayan Hussain</span><br>AI Developer         <div>
+                            <h1>Hi, I'm <span>Ayan Hussain</span><br>AI Developer</h1>
+                            <p>Building next-gen AI automation tools. Founder of Zappnod -- the AI visual canvas platform. MLH Hackathon speedrunner.</p>
+            <a href="#projects" class="btn">View Projects</a>
+                            <a href="https://github.com/ayanlogix" class="btn outline">GitHub -></a>
+                        </div>
+                    </section>
+
+                    <div class="section" id="projects">
+                        <h2>Featured <span>Projects</span></h2>
+                        <div class="cards">
+                            <div class="card">
+                                <div class="icon">EL</div>
+                                <h3>Zappnod</h3>
+                                <p>AI-powered visual automation canvas. Drag-drop workflows, glassmorphism UI, real-time neural processing. Built with vanilla JS + FastAPI.</p>
+                            </div>
+                            <div class="card">
+                                <div class="icon">GR</div>
+                                <h3>Mergington High School App</h3>
+                                <p>FastAPI-powered extracurricular activity management system. Built and improved using GitHub Copilot. Added 5 activities, unit tests, and participant tracking.</p>
+            </div>
+            <div class="card">
+                <div class="icon">LO</div>
+                <h3>Auth0 Login Flow</h3>
+                <p>Secure authentication implementation using Auth0 SPA SDK. Single-page application with login, logout, and user profile display.</p>
+                            </div>
+                        </div>
+
+                        <div class="copilot-badge">
+                            <p>RB This portfolio was built with <strong>GitHub Copilot</strong> assistance -- from layout structure to card animations and responsive design.</p>
+        </div>
+    </div>    <div class="section" id="skills">
+        <h2>My <span>Skills</span></h2>
+        <div class="skills">
+            <span class="skill">Python</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">FastAPI</span>
+            <span class="skill">GitHub Copilot</span>
+                            <span class="skill">Auth0</span>
+                            <span class="skill">Cloudinary</span>
+                            <span class="skill">HTML/CSS</span>
+                            <span class="skill">Git</span>
+                            <span class="skill">REST APIs</span>
+                            <span class="skill">pytest</span>
+                            <span class="skill">AI/ML</span>
+                        </div>
+                    </div>
+
+                    <div class="section" id="contact">
+                        <h2>Let's <span>Connect</span></h2>
+                        <div class="cards">
+                            <div class="card" style="text-align:center">
+                                <div class="icon">OC</div>
+                                <h3>GitHub</h3>
+                                <p><a href="https://github.com/ayanlogix" style="color:#635dff">github.com/ayanlogix</a></p>
+                            </div>
+                            <div class="card" style="text-align:center">
+                                <div class="icon">TR</div>
+                                <h3>MLH Hackathon</h3>
+                                <p>Participating in Global Hack Week GenAI 2025. Speedrunning all challenges!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer>
+                        <p>Built with HE and GitHub Copilot by Ayan Hussain (c) 2025</p>
+                    </footer>
+                </body>
+                </html>
+
+    <section class="hero">
+        <div>
+                            <h1>Hi, I'
